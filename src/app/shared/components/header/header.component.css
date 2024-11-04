@@ -1,0 +1,36 @@
+nav {
+    height: 100%;
+}
+
+.side-nav-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.side-nav-button:hover{
+    background-color: rgb(211, 145, 59);
+    border-radius: 30%;
+}
+
+.navbar{
+    background-color: rgb(6, 56, 39);
+   
+    
+    
+}
+
+.navbar-brand1{
+    display: flex;
+    align-content: end;
+    color: white;
+}
+
+.titulo{
+   
+    color: white;
+    font-family: 'Poppins',sans-serif;
+    font-size: 20px;
+}

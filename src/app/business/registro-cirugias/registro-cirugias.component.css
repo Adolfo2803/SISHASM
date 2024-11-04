@@ -1,0 +1,141 @@
+.hrflex{
+    display: block;
+    height: 2px;
+    border: 0;
+    background-color: #235b4e;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/* input{
+    border-color: #9D2449;
+    background-color: rgb(239, 238, 238);
+}
+label{
+    color: #9D2449;
+}
+
+select{
+    border-color: #9D2449;
+    background-color: rgb(239, 238, 238);
+} */
+ .title{
+        color: #235b4e;
+    }
+
+
+    /* Contenedor del input */
+.input-container {
+    position: relative;
+    margin-top: 20px;
+  }
+  
+  /* Estilos del input */
+  .input-container .form-control {
+    border: 2px solid #BC955C; /* Color de borde por defecto */
+    border-radius: 10px;
+    padding: 0 15px;
+    height: 45px; 
+    font-family: "Montserrat", sans-serif;
+    transition: border-color 0.3s ease; /* Transición suave para el cambio de color */
+  }
+  
+  .input-container .form-control:focus {
+    border-color: #235b4e; /* Color verde */
+    outline: none; /* Opcional: elimina el contorno azul por defecto en algunos navegadores */
+  }
+  
+  /* Estilos del label flotante, siempre en la parte superior */
+  .input-container .floating-label {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    position: absolute;
+    top: -8px;
+    left: 10px;
+    color: #BB965C;
+    font-size: 13px;
+    background-color: white;
+    padding: 0 5px;
+    pointer-events: none;
+  }
+  
+
+
+  /* Estilo para los inputs y selects */
+.input-container .form-select {
+  border: 1px solid #BB965C; /* Cambia este color al que necesitas */
+  border-radius: 4px;
+  height: 45px; 
+
+}
+
+/* Agrega el color de borde cuando el campo está enfocado */
+.input-container .form-select:focus {
+  border-color: #235b4e; /* Color de borde al hacer foco */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Estilo del option */
+.input-container .form-select option:checked {
+  color: #235b4e; /* Color de texto */
+  background-color: #BB965C; /* Color de fondo del seleccionado */
+}
+.iconform{
+  color: #235b4e;
+    }
+    .etiquetaicono{
+      margin-left: 4px;
+      font-weight: 700;
+    }
+
+/*Estilos de los inconos de la tabla*/
+    .tableiconE{
+      margin-right: 20px;
+      color: #235b4e;
+  }
+  .tableiconD{
+      color: crimson;
+  }
+
+ 
+
+  /* Estilo para el contenedor principal */
+.rowMain {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  gap: 20px; /* Espacio entre los divs */
+  margin: 10px;
+  padding: 20px;
+}
+
+/* Ajuste de estilo para form-container */
+.form-container {
+  flex: 1 1 calc(50% - 10px); /* Ocupa el 50% del ancho con un pequeño margen lateral */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  min-width: 300px; /* Asegura un ancho mínimo para pantallas pequeñas */
+}
+
+.table-container {
+  max-height: 200px; /* Ajusta la altura máxima según necesites */
+  overflow-y: auto; /* Añade scroll vertical */
+  overflow-x: auto; /* Añade scroll horizontal si la tabla es muy ancha */
+  padding: 10px;
+  border: 1px solid #ddd; /* Borde opcional */
+  border-radius: 8px; /* Bordes redondeados */
+  background-color: #f9f9f9; /* Color de fondo opcional */
+}
+
+
+.table thead th {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff; /* Fondo del encabezado */
+  z-index: 1;
+  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4); /* Sombra para mejor visualización */
+}
+

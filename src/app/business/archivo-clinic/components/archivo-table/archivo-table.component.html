@@ -1,0 +1,50 @@
+<div class="Scrolltable">
+<div class="row">
+    <div col-12>
+      <table class="table table-responsive">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Expediente</th>
+            <th scope="col">Nombre del Paciente</th>
+            <th scope="col">Apellido Paterno</th>
+            <th scope="col">Apellido materno</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Edad</th>
+            <th scope="col">CURP</th>
+            <th scope="col">Domicilio</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Nombre_elaboracion</th>
+            <th scope="col">Fecha Elaboración</th>
+            <th scope="col">Ubicacion</th>
+            <th scope="col">Acciones</th>
+
+
+  
+          </tr>
+        </thead>
+        <tbody>
+          @for(tablaitem of listPaciente; track $index) {
+            <tr>
+              <td>{{tablaitem.expediente}}</td>
+              <td>{{tablaitem.paciente}}</td>
+              <td>{{tablaitem.ap_paterno}}</td>
+              <td>{{tablaitem.ap_materno}}</td>
+              <td>{{tablaitem.sexo}}</td>
+              <td>{{tablaitem.edad}}</td>
+              <td>{{tablaitem.curp}}</td>
+              <td>{{tablaitem.domicilio}}</td>
+              <td>{{tablaitem.telefono}}</td>
+              <td>{{tablaitem.elaboro}}</td>
+              <td>{{tablaitem.fecha_elab}}</td>
+              <td>{{tablaitem.ubicacion}}</td>  <td><div class="tablaiconos"><a href="#"><i class="tableiconE bi bi-pencil-square"></i></a>  <a href="#"><i class="tableiconD bi bi-trash3-fill"></i></a></div></td>
+
+
+          
+        </tr>
+          }
+        </tbody>
+      </table>
+    </div>  
+    </div>
+  
+  </div>  

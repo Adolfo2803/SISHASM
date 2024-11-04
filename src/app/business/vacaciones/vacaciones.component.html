@@ -1,0 +1,126 @@
+
+
+
+<div class="container-fluid ">
+    <div class="col form-container">
+        <h2 class="title">Registro de Vacaciones</h2>
+        <div class="hrflex"></div>
+        <i class=" iconform bi bi-person-circle"><span class="etiquetaicono">Datos del paciente</span></i>
+        <form [formGroup]="vacacionesForms" (ngSubmit)="onSubmit()" class="row g-6 needs-validation " novalidate>
+            <div class="row">
+                
+                <!-- Campo de Nombre -->
+                <div class="col-md-6 mb-6">
+                    <div class="input-container">
+                    <label for="name" class="floating-label">Nombre</label>
+                    <input formControlName="name" type="text" class="form-control" id="name"
+                        placeholder="Nombre" required>
+
+                </div>
+                </div>
+                <!-- Campo de Registro -->
+                <div class="col-md-6 mb-3">
+                    <div class="input-container">
+                    <label for="registro" class="floating-label">Registro</label>
+                    <input formControlName="registro" type="text" class="form-control" id="registro"
+                        placeholder="Registro" required>
+                </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Campo de Motivo -->
+                <div class="col-md-6 mb-3">
+                    <div class="input-container">
+                    <label for="autorizo"class="floating-label">Autorizo</label>
+                    <input formControlName="autorizo" type="text" class="form-control" id="autorizo"
+                        placeholder="Autorizo" required>
+                </div>
+                </div>
+                <!-- Campo de Fecha Inicio -->
+                <div class="col-md-3 mb-3">
+                    <div class="input-container">
+                    <label for="fecha_inicio" class="floating-label">Fecha Inicio</label>
+                    <input formControlName="fecha_inicio" type="date" class="form-control" id="fecha_inicio"
+                        required>
+                </div>
+            </div>
+                <!-- Campo de Fecha Término -->
+                <div class="col-md-3 mb-3">
+                    <div class="input-container">
+                    <label for="fecha_termino" class="floating-label">Fecha Término</label>
+                    <input formControlName="fecha_termino" type="date" class="form-control" id="fecha_termino"
+                        required>
+                </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Campo de Estado -->
+                <div class="col-md-6 mb-3">
+                    <div class="input-container">
+                    <label for="estado" class="floating-label">Estado</label>
+                    <select formControlName="estado" class="form-select" id="estado" required>
+                        <option value="">Selecciona el estado</option>
+                        <option value="Aprobado">Aprobado</option>
+                        <option value="Pendiente">Pendiente</option>
+                        <option value="Rechazado">Rechazado</option>
+                    </select>
+                </div>
+                </div>
+            </div>
+        
+            <div class="row">
+          
+                <div class="col-sm mb-3">
+                  
+                  <button (click)="agregarData()" type="submit" class="btn btn-guardar">Guardar</button>
+                  
+                </div>
+              </div>
+              </form>
+
+
+              <div class="hrflex"></div>
+
+    </div>
+    <i class="iconform bi-table"><span class="etiquetaicono">Tabla de resultados</span></i>
+    <div class="row">
+        <div col-12>
+            <table class="table table-responsive">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Registro</th>
+                        <th scope="col">Autorizo</th>
+                        <th scope="col">Fecha Inicio</th>
+                        <th scope="col">Fecha Termino</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                                            
+                            @for (item of vacacionesService.vacaciones; track $index) {
+                                <tr>
+                                  
+                                    <td>{{item.name}}</td>
+                                    <td>{{item.registro}}</td>
+                                    <td>{{item.autorizo}}</td>
+                                    <td>{{item.fecha_inicio}}</td>
+                                    <td>{{item.fecha_termino}}</td>
+                                    <td>{{item.estado}}</td>
+                                    <td><div class="tablaiconos"><a href="#"><i class="tableiconE bi bi-pencil-square"></i></a>  <a href="#"><i class="tableiconD bi bi-trash3-fill"></i></a></div></td>
+
+                                </tr>
+                            }
+
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+</div>

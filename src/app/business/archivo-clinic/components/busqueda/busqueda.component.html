@@ -1,0 +1,122 @@
+<div class="container-fluid">
+    <div class="main-content">
+        <h1 class="title">Búsqueda de Archivo</h1>
+        <div class="hrflex"></div>
+        
+        <div class="row mb-3">
+          <i class="iconform bi-search"><span class="etiquetaicono">Buscar por:</span></i>
+          <div class="col-12 col-md-2 mb-2">
+            <div class="filter-container btn-Expediente"
+                 [class.selected]="selectedFilter === 'expediente'"
+                 [class.faded]="selectedFilter && selectedFilter !== 'expediente'">
+              <a class="btn filter-btn" (click)="selectFilter('expediente')" role="button">Expediente</a>
+              <span class="close-icon" (click)="resetFilter()">&times;</span>
+            </div>
+          </div>
+          <div class="col-12 col-md-2 mb-2">
+            <div class="filter-container btn-Nombre"
+                 [class.selected]="selectedFilter === 'nombre'"
+                 [class.faded]="selectedFilter && selectedFilter !== 'nombre'">
+              <button class="btn filter-btn" (click)="selectFilter('nombre')" type="button">Nombre</button>
+              <span class="close-icon" (click)="resetFilter()">&times;</span>
+            </div>
+          </div>
+        </div>
+        
+            
+        </div>
+      
+
+        
+        <form [formGroup]="formBusqueda" (ngSubmit)="onSubmit()">
+            <div class="row">
+              
+                <div class="col-12 mb-3 form-group">
+                   <div class="input-container">
+                    <input type="text" class="form-control" id="searchInput" formControlName="search" placeholder="Ingrese un dato">
+                    <label for="searchInput" class="floating-label">Búsqueda</label>
+
+                   </div> 
+                </div>
+                <div class="Scrolltable">
+                  <div class="row">
+                    <i class="iconform bi-table"><span class="etiquetaicono">Tabla de resultados</span></i>
+                      <div col-12>
+                        <table class="table table-responsive">
+                          <thead class="thead-dark">
+                            <tr>
+<<<<<<< HEAD
+                              <th scope="col">Expediente</th>
+              <th scope="col">Nombre del Paciente</th>
+              <th scope="col">Apellido Paterno</th>
+              <th scope="col">Apellido materno</th>
+              <th scope="col">Sexo</th>
+              <th scope="col">Edad</th>
+              <th scope="col">CURP</th>
+              <th scope="col">Domicilio</th>
+              <th scope="col">Telefono</th>
+              <th scope="col">Nombre_elaboracion</th>
+              <th scope="col">Fecha Elaboración</th>
+              <th scope="col">Ubicacion</th>
+              <th scope="col">Acciones</th>
+                    
+                            </tr>
+                          </thead>
+                          <tbody>
+                            @for(tablaitem of tabla_archive.tabla_data; track $index) {
+                              <tr>
+                            <td>{{tablaitem.expediente}}</td>
+                            <td>{{tablaitem.nombre_paciente}}</td>
+                            <td>{{tablaitem.ap_paterno}}</td>
+                            <td>{{tablaitem.ap_materno}}</td>
+                            <td>{{tablaitem.sexo}}</td>
+                            <td>{{tablaitem.edad}}</td>
+                            <td>{{tablaitem.curp}}</td>
+                            <td>{{tablaitem.domicilio}}</td>
+                            <td>{{tablaitem.telefono}}</td>
+                            <td>{{tablaitem.elaboro}}</td>
+                            <td>{{tablaitem.fecha_elab}}</td>
+                            <td>{{tablaitem.ubicacion}}</td>
+                            <td><div class="tablaiconos"><a href="#"><i class="tableiconE bi bi-pencil-square"></i></a>  <a href="#"><i class="tableiconD bi bi-trash3-fill"></i></a></div></td>
+  
+=======
+                          <td>{{tablaitem.expediente}}</td>
+                          <td>{{tablaitem.paciente}}</td>
+                          <td>{{tablaitem.ap_paterno}}</td>
+                          <td>{{tablaitem.ap_materno}}</td>
+                          <td>{{tablaitem.sexo}}</td>
+                          <td>{{tablaitem.edad}}</td>
+                          <td>{{tablaitem.curp}}</td>
+                          <td>{{tablaitem.domicilio}}</td>
+                          <td>{{tablaitem.telefono}}</td>
+                          <td>{{tablaitem.fecha_elab}}</td>
+                          <td>{{tablaitem.elaboro}}</td>
+                          <td><div class="tablaiconos"><a href="#"><i class="tableiconE bi bi-pencil-square"></i></a>  <a href="#"><i class="tableiconD bi bi-trash3-fill"></i></a></div></td>
+
+                
+                          
+                        </tr>
+                          }
+                        </tbody>
+                      </table>
+>>>>>>> 2e12a99 (Login: se crea nuevo componente, para archivo, se limita el login de acceso)
+                  
+                            
+                          </tr>
+                            }
+                          </tbody>
+                        </table>
+                    
+                      </div>
+                    
+                    </div> 
+                </div>   
+                
+            </div>
+
+            
+            
+
+        </form>
+
+    </div>

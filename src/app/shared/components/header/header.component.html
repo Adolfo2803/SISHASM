@@ -1,0 +1,29 @@
+<nav class=" navbar row">
+    <div class="side-nav-button p-2 me-1   text-center text-light col" (click)="SideNavToggle() ">
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="23" height="23" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"></path><path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path></svg> -->
+        <i class="bi bi-list"></i>
+    </div>
+    <div class="col-11  titulo row row justify-content-between mx-2">
+
+        <div class="col aling-item-end">
+           <h3>Hospital General IMSS-BIENESTAR Tuxpan</h3> 
+        </div>
+
+    
+       @if (user !== null) {
+        <h2 class="col-auto">{{user}}</h2>
+       }
+       @if (user == null) {
+        <h2 class="col-auto">Usuario {{user}}</h2>
+       }
+      
+       <!-- <h4 class="titulo">{{currentDate| date:'dd-MM-YYYY' }}</h4>  -->
+        <button class="btn btn-primary col-1 mx-2" routerLink="/login">Entrar</button>
+
+        
+    </div>
+    
+</nav>
+
+
+

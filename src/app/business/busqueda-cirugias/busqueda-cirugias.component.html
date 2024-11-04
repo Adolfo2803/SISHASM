@@ -1,0 +1,89 @@
+<div class="container">
+    <div class="main-content">
+        <h1 class="title">Búsqueda de Cirugías</h1>
+         
+        <div class="hrflex"></div>
+        
+        
+        <div class="row mb-3" >
+          <div class="col-12 col-md-2 mb-2">
+              <a class="btn btn-Fecha w-100"  role="button"  ngIf="!botonSeleccionado ===null|| botonSeleccionado === 'Fecha'" (click)="ocultarBotones('Fecha')">Fecha</a>
+          </div>
+          <div class="col-12 col-md-2 mb-2">
+              <button class="btn btn-Cirujia w-100" type="submit" ngIf="!botonSeleccionado || botonSeleccionado === 'Cirugia'" (click)="ocultarBotones('Cirugia')">Cirugia</button>
+          </div>
+          <div class="col-12 col-md-2 mb-2">
+              <button class="btn btn-Expediente w-100" type="submit" ngIf="!botonSeleccionado || botonSeleccionado === 'Expediente'" (click)="ocultarBotones('Expediente')">Expediente</button>
+          </div>
+          <div class="col-12 col-md-2 mb-2">
+              <button class="btn btn-Nombre w-100" type="submit"  ngIf="!botonSeleccionado || botonSeleccionado === 'Nombre'" (click)="ocultarBotones('Nombre')">Nombre</button>
+          </div>
+          <div class="col-12 col-md-2 mb-2">
+              <button class="btn btn-Medico w-100" type="submit" ngIf="!botonSeleccionado || botonSeleccionado === 'Medico'" (click)="ocultarBotones('Medico')">Medico</button>
+          </div>
+          <div class="col-12 col-md-2 mb-2">
+              <button class="btn btn-Cirujano w-100" type="submit" ngIf="!botonSeleccionado || botonSeleccionado === 'Cirujano'" (click)="ocultarBotones('Cirujano')">Cirujano</button>
+          </div>
+      </div>
+        
+        
+      
+
+        
+        <form [formGroup]="busquedaCForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="col-12 mb-3">
+                  <i class="iconform bi-search"><span class="etiquetaicono">Buscar por:</span></i>
+                  <div class="input-container">
+                    <input type="text" formControlName="search" class="form-control" id="searchInput" placeholder="ingrese un dato" required>
+                    <label for="searchInput" class="floating-label">Busqueda</label>
+                  </div>
+                </div>
+                <div class="col-12 mb-3">
+                   <i class="iconform bi-table"><span class="etiquetaicono">Tabla de resultados</span></i>
+                   <table class="table table-responsive">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Cirugia</th>
+                        <th scope="col">Expediente</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Cirujano</th>
+                        <th scope="col">Anestesiologo</th>
+                        <th scope="col">Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      @for (busquedaC of busquedacService.busquedaC; track $index) {
+                        <tr>
+                          <th scope="row">{{ busquedaC.id }}</th>
+                          <td>{{ busquedaC.fechaCirugia }}</td>
+                          <td>{{ busquedaC.nomCirugia }}</td>
+                          <td>{{ busquedaC.numExpediente }}</td>
+                          <td>{{ busquedaC.nomPaciente }}</td>
+                          <td>{{ busquedaC.nomCirujano }}</td>
+                          <td>{{ busquedaC.nomAnestesiologo }}</td>
+                          <td><div class="tablaiconos"><a href="#"><i class="tableiconE bi bi-pencil-square"></i></a>  <a href="#"><i class="tableiconD bi bi-trash3-fill"></i></a></div></td>
+                        </tr>
+                      }
+                     
+                     
+                    </tbody>
+                  </table>
+                </div>
+                
+            </div>
+
+            <div class="hrflex"></div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <button class="btn btn-danger" type="submit" [disabled]="busquedaCForm.validator">Búsqueda</button>
+               
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+</div>

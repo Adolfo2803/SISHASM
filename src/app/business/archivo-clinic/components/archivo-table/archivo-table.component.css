@@ -1,0 +1,28 @@
+.tableiconE{
+    margin-right: 1em;
+    color: burlywood;
+    font-size: 1.5em;
+}
+.tableiconD{
+    color: crimson;
+    font-size: 1.5em;
+}
+.tablaiconos{
+    display: flex;
+}
+.Scrolltable{
+height: 500px; 
+  overflow-y: auto; 
+  overflow-x: auto; 
+  padding: 10px;
+  border: 1px solid #ddd; 
+  border-radius: 8px;
+  background-color: #f9f9f9; 
+}
+.table thead th{
+position: sticky;
+  top: 0;
+  background-color: #ffffff; /* Fondo del encabezado */
+  z-index: 1;
+  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4)
+}

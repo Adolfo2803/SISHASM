@@ -1,0 +1,216 @@
+<div class="container-fluid">
+    <div class="form-container">
+      
+      <form class="" [formGroup]="form" (ngSubmit)="resetForm()">
+        <h1 class="title">Registro Archivo Clínico</h1>
+        <div class="hrflex"></div>
+        <i class=" iconform bi bi-person-circle"><span class="etiquetaicono">Datos del paciente</span></i>
+        <div class="row">
+          <div class="col-sm form-group">
+            <div class="input-container">
+              <input type="text" formControlName="expediente" class="form-control" id="expediente" placeholder="ingrese expediente" required>
+              <label for="expediente" class="floating-label">Expediente</label>
+            </div>
+            <div class="alert alert-danger" [hidden]="form.get('expediente')?.valid || form.get('expediente')?.pristine">
+              Expediente Obligatorio
+            </div>
+          </div>
+          
+          <div class="col-sm form-group">
+            <div class="input-container">
+            <input type="text" formControlName="nombre" class="form-control" id="nombre" placeholder="ingresa Nombre">
+              <label for="nombre" class="floating-label">Nombre</label>
+            </div>
+            <div class="alert alert-danger" [hidden]="form.get('nombre')?.valid ||form.get('nombre')?.pristine ">Nombre
+              Obligatorio</div>
+          </div>
+          
+          <div class="col-sm form-group">
+            <div class="input-container">
+            <input type="text" formControlName="ap_paterno" class="form-control" id="apellido-paterno" placeholder="Apellido Paterno...">
+              <label for="apellido-paterno" class="floating-label">Apellido Paterno</label>
+            </div>
+            <div class="alert alert-danger" [hidden]="form.get('ap_paterno')?.valid ||form.get('ap_paterno')?.pristine ">
+              Apellido Pat. Obligatorio</div>
+          </div>
+          
+          <div class="col-sm form-group">
+            <div class="input-container">
+              <input type="text" formControlName="ap_materno" class="form-control" id="apellido-materno"
+              placeholder="Apellido Materno...">
+              <label for="apellido-materno" class="floating-label">pellido Materno</label>
+            </div>
+            <div class="alert alert-danger" [hidden]="form.get('ap_materno')?.valid ||form.get('ap_materno')?.pristine ">
+              Apellido Mat. Obligatorio</div>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-sm-3 form-group">
+            <div class="input-container">
+              <select formControlName="sexo" class="form-control" id="sexo" required>
+                <option value="" disabled selected>Seleccione...</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+              </select>
+              <label for="sexo" class="floating-label">Sexo</label>
+            </div>
+            <div class="alert alert-danger" [hidden]="form.get('sexo')?.valid || form.get('sexo')?.pristine">
+              Obligatorio
+            </div>
+          </div>
+        
+          <div class="col-sm-1 form-group">
+            <div class="input-container">
+              <select formControlName="edad" class="form-control" id="edad" required>
+                <option value="" disabled selected>edad...</option>
+                <option *ngFor="let age of ageOptions" [value]="age" [selected]="age === 25">{{ age }}</option>
+            
+              </select>
+              <label for="edad" class="floating-label">Edad</label>
+            </div>
+            <div class="alert alert-danger" [hidden]="form.get('edad')?.valid || form.get('edad')?.pristine">
+              Edad Obligatoria
+            </div>
+          </div>
+        
+
+          
+          <div class="col-sm form-group">
+            <div class="input-container">
+              <input type="text" formControlName="curp" class="form-control" id="matricula" placeholder="CURP...">
+            <label for="matricula" class="floating-label">curp</label>
+            </div>
+            <div class="alert alert-danger" [hidden]="form.get('curp')?.valid ||form.get('curp')?.pristine ">
+              CURP Obligatoria</div>
+  
+          </div>
+          <div class="col-sm form-group">
+            <div class="input-container">
+            <input type="text" formControlName="domicilio" class="form-control" id="domicilio">
+            <label for="domicilio" class="floating-label">Domicilio</label>
+            </div>
+
+            <div class="alert alert-danger" [hidden]="form.get('domicilio')?.valid ||form.get('domicilio')?.pristine ">
+              Obligatorio</div>
+          </div>
+        </div>
+
+        <div class="row">
+          
+
+          <div class="col-sm-2 form-group">
+            <div class="input-container">
+              <input type="text" formControlName="telefono" class="form-control" id="telefono" placeholder="telefono...">
+            <label for="elabora" class="floating-label">Telefono</label>
+
+            </div>
+            <div class="alert alert-danger"
+              [hidden]="form.get('telefono')?.valid ||form.get('telefono')?.pristine ">Telefono
+              Obligatoria</div>
+  
+          </div>
+         
+        </div>
+
+
+        <br>
+        <i class=" iconform bi-info-circle"><span class="etiquetaicono">Datos del capturista</span></i>
+        <div class="row">
+          <div class="col-sm form-group">
+            <div class="input-container">
+            <input type="date" formControlName="fecha" class="form-control" id="fecha-elaboracion">
+            <label for="fecha-elaboracion" class="floating-label">Fecha Elaboración</label>
+            </div>
+
+            <div class="alert alert-danger" [hidden]="form.get('fecha')?.valid ||form.get('fecha')?.pristine ">
+              Fecha elab. Obligatorio</div>
+          </div>
+
+          <div class="col-sm form-group">
+            <div class="input-container">
+              <input type="text" formControlName="elabora" class="form-control" id="elabora" placeholder="Elabora...">
+            <label for="elabora" class="floating-label">Elabora</label>
+
+            </div>
+            <div class="alert alert-danger"
+              [hidden]="form.get('elabora')?.valid ||form.get('elabora')?.pristine ">Nombre de quien elabora es
+              Obligatorio</div>
+  
+          </div>
+          <div class="col-sm form-group">
+            <div class="input-container">
+              <input type="text" formControlName="ubicacion" class="form-control" id="matricula" placeholder="ubicacion en hospital...">
+            <label for="ubicacion" class="floating-label">Ubicacion</label>
+            </div>
+            <div class="alert alert-danger" [hidden]="form.get('ubicacion')?.valid ||form.get('ubicacion')?.pristine ">
+              Ubicacion Obligatoria</div>
+  
+          </div>
+        </div>
+  
+  
+        <div class="row">
+          
+          <div class="col-sm">
+            
+            <button (click)="agregarData()" type="submit" class="btn btn-guardar">Guardar</button>
+            <button (click)="list()" type="submit" class="btn btn-guardar">Aceptar</button>
+            
+          </div>
+        </div>
+        
+      </form>
+      
+    </div>
+    
+  </div>
+  <br>
+  <div class="hrflex"></div>
+
+  <!--
+  
+  <div class="row">
+    <div col-12>
+      <table class="table table-responsive">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Expediente</th>
+            <th scope="col">Nombre del Paciente</th>
+            <th scope="col">Apellido Paterno</th>
+            <th scope="col">Apellido materno</th>
+            <th scope="col">Fecha Elaboración</th>
+            <th scope="col">Nombre_elaboracion</th>
+            <th scope="col">matricula</th>
+  
+          </tr>
+        </thead>
+        <tbody>
+         
+            @for(paciente of pacienteService.pacientes; track $index) {
+              <tr>
+            <td>{{paciente.expediente}}</td>
+            <td>{{paciente.nombre}}</td>
+            <td>{{paciente.paterno}}</td>
+            <td>{{paciente.materno}}</td>
+            <td>{{paciente.fecha_elab}}</td>
+            <td>{{paciente.elabora_name}}</td>
+            <td>{{paciente.matricula}}</td>
+  
+            
+          </tr>
+            }
+          
+        </tbody>
+      </table>
+  
+    </div>
+  
+  </div>
+  -->
+  <i class="iconform bi-table"><span class="etiquetaicono">Tabla de resultados</span></i>
+
+  <app-archivo-table></app-archivo-table>
+  <!--<app-formpractica></app-formpractica>-->
+
+  <router-outlet />

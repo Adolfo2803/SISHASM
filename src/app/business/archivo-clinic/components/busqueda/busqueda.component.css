@@ -1,0 +1,151 @@
+.hrflex {
+    display: block;
+    height: 2px;
+    border: 0;
+    background-color: #235b4e;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+
+/* Botones */
+.btn-Expediente, .btn-Nombre {
+    background-color: #800020; 
+    color: rgb(255, 255, 255); 
+    border: 1px  #a30029; 
+    cursor: pointer;
+    width: 100%; 
+    border-radius: 20px;
+}
+
+.btn-Expediente:hover, .btn-Nombre:hover {
+    background-color: #DDC9A3; 
+    border-color: #DDC9A3; 
+}
+
+.btn-Expediente:active, .btn-Nombre:active {
+    background-color: #ffffff; 
+    border-color: #BC955C; 
+}
+
+.filter-container {
+    position: relative;
+    color: aliceblue;
+}
+
+.filter-btn {
+    display: inline-block;
+    width: 100%; /* Asegura que el botón ocupe todo el ancho disponible */
+    color: rgb(255, 255, 255);
+}
+
+
+
+.close-icon {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    cursor: pointer;
+    display: none; /* Ocultar inicialmente */
+    font-size: 20px; /* Tamaño  icono "x" */
+    color: #9D2449; 
+}
+
+.filter-container.selected .filter-btn {
+    background-color: #BC955C; 
+    color: #ffffff; 
+    border-color: #BC955C; 
+}
+      .filter-container.faded {
+        opacity: 0.3; 
+      }
+
+      .input-container {
+        position: relative;
+        margin-top: 20px;
+      }
+      
+      /* Estilos del input */
+      .input-container .form-control {
+        border: 2px solid #BC955C; /* Color de borde por defecto */
+        border-radius: 10px;
+        padding: 0 15px;
+        height: 40px; 
+        font-family: "Montserrat", sans-serif;
+        transition: border-color 0.3s ease; /* Transición suave para el cambio de color */
+      }
+    
+      .input-container .form-control:focus {
+        border-color: #235b4e; /* Color verde */
+        outline: none; /* Opcional: elimina el contorno azul por defecto en algunos navegadores */
+      }
+      
+      /* Estilos del label flotante, siempre en la parte superior */
+      .input-container .floating-label {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        position: absolute;
+        top: -8px;
+        left: 10px;
+        color: #BB965C;
+        font-size: 13px;
+        background-color: white;
+        padding: 0 5px;
+        pointer-events: none;
+      }
+      .btn-guardar{
+        color: aliceblue;
+        background-color: #BC955C;
+        border-color: #9D2449;
+        margin-top: 1rem;
+        width: auto;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        }
+        .btn-guardar:hover {
+            color: aliceblue;
+            background-color: #9D2449; /* Cambiar a un azul más claro */
+            transform: scale(1.05); /* Aumentar un poco el tamaño al hacer hover */
+          }
+          .iconform{
+            color: #235b4e;
+            margin-bottom: 4px;
+              }
+              .etiquetaicono{
+                margin-left: 4px;
+                font-weight: 700;
+              }
+              .title{
+                color: #235b4e;
+                text-align: justify;
+            }
+            .tableiconE{
+              margin-right: 1em;
+              color: burlywood;
+              font-size: 1.5em;
+          }
+          .tableiconD{
+              color: crimson;
+              font-size: 1.5em;
+          }
+          .tablaiconos{
+              display: flex;
+          }
+          
+        .Scrolltable{
+          height: 500px; 
+          overflow-y: auto; 
+          overflow-x: auto; 
+          padding: 10px;
+          border: 1px solid #ddd; 
+          border-radius: 8px;
+          background-color: #f9f9f9; 
+        }
+        .table thead th{
+        position: sticky;
+          top: 0;
+          background-color: #ffffff; /* Fondo del encabezado */
+          z-index: 1;
+          box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4)
+        }

@@ -1,0 +1,165 @@
+.hrflex{
+    display: block;
+    height: 2px;
+    border: 0;
+    background-color: #235b4e;
+    margin: 1em 0;
+    padding: 0;
+    
+}
+/*estilos de icono de la tabla*/
+.tableiconE{
+    margin-right: 1em;
+    color: burlywood;
+    font-size: 1.5em;
+}
+.tableiconD{
+    color: crimson;
+    font-size: 1.5em;
+}
+.tablaiconos{
+    display: flex;
+}
+/*estilo de los iconos*/
+.iconform{
+    color: #235b4e;
+    margin-bottom: 4px;
+      }
+      .etiquetaicono{
+        margin-left: 4px;
+        font-weight: 700;
+      }
+      .title{
+        color: #235b4e;
+        text-align: justify;
+    }
+/*ocultar botones*/
+.oculto {
+    display: none;
+  }
+/*botones*/
+.btn-Fecha {
+    background-color: #800020; 
+    color: white; 
+    border-color: #800020; 
+}
+.btn-Fecha:hover {
+    background-color: #DDC9A3; 
+    border-color: #DDC9A3; 
+}
+.btn-Fecha:active {
+    background-color: #BC955C; 
+    border-color: #BC955C; 
+}
+
+.btn-Cirujia {
+    background-color: #800020;
+    color: white; 
+    border-color: #800020;
+}
+.btn-Cirujia:hover {
+    background-color: #DDC9A3; 
+    border-color: #DDC9A3; 
+}
+.btn-Cirujia:active {
+    background-color: #BC955C; 
+    border-color: #BC955C; 
+}
+
+.btn-Expediente {
+    background-color: #800020;
+    color: white; 
+    border-color: #800020; 
+}
+.btn-Expediente:hover {
+    background-color: #DDC9A3; 
+    border-color: #DDC9A3; 
+}
+.btn-Expediente:active {
+    background-color: #BC955C; 
+    border-color: #BC955C; 
+}
+
+.btn-Nombre {
+    background-color: #800020;
+    color: white; 
+    border-color: #800020; 
+}
+.btn-Nombre:hover {
+    background-color: #DDC9A3; 
+    border-color: #DDC9A3; 
+}
+.btn-Nombre:active {
+    background-color: #BC955C; 
+    border-color: #BC955C; 
+}
+
+.btn-Medico {
+    background-color: #800020;
+    color: white; 
+    border-color: #800020; 
+}
+.btn-Medico:hover {
+    background-color: #DDC9A3; 
+    border-color: #DDC9A3; 
+}
+.btn-Medico:active {
+    background-color: #BC955C; 
+    border-color: #BC955C;  
+}
+
+.btn-Cirujano {
+    background-color: #800020;
+    color: white; 
+    border-color: #800020; 
+}
+.btn-Cirujano:hover {
+    background-color: #DDC9A3; 
+    border-color: #DDC9A3; 
+}
+.btn-Cirujano:active {
+    background-color: #BC955C; 
+    border-color: #BC955C;  
+}
+
+select{
+    border-color: #9D2449;
+    background-color: rgb(239, 238, 238);
+}
+ .title{
+        color: #235b4e;
+    }
+    .input-container {
+        position: relative;
+        margin-top: 20px;
+      }
+      
+      /* Estilos del input */
+      .input-container .form-control {
+        border: 2px solid #BC955C; /* Color de borde por defecto */
+        border-radius: 10px;
+        padding: 0 15px;
+        height: 40px; 
+        font-family: "Montserrat", sans-serif;
+        transition: border-color 0.3s ease; /* Transición suave para el cambio de color */
+      }
+    
+      .input-container .form-control:focus {
+        border-color: #235b4e; /* Color verde */
+        outline: none; /* Opcional: elimina el contorno azul por defecto en algunos navegadores */
+      }
+      
+      /* Estilos del label flotante, siempre en la parte superior */
+      .input-container .floating-label {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        position: absolute;
+        top: -8px;
+        left: 10px;
+        color: #BB965C;
+        font-size: 13px;
+        background-color: white;
+        padding: 0 5px;
+        pointer-events: none;
+      }
+
